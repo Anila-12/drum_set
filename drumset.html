@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-image: linear-gradient(purple,black);
+            background-repeat: no-repeat;
+            background-size: 100% 700px;
+        }
+        #heading{
+            font-size: 80px;
+            text-align: center;
+            letter-spacing: 20px;
+            color: white;
+            text-shadow: 2px 2px 5px rgb(255, 0, 0), -2px -2px 5px lime;
+        }
+        input{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border: 5px solid burlywood;
+            position: absolute;
+            box-shadow: 0px 0px 15px black;
+            transition: width 0.3s, height 0.3s, margin-top 0.2s, margin-left 0.2s;
+        }
+        #tom1{
+            width: 120px;
+            height: 120px;
+            left: 90px;
+            border: 10px solid rgb(99,56,0);
+            background-image: radial-gradient(rgb(105,60,0),rgb(252,195,8));
+            bottom: 110px;
+        }
+        #tom2{
+            border: 5px solid rgb(99,56,0);
+            background-image: radial-gradient(rgb(240,136,0),rgb(255,231,152));
+            width: 150px;
+            height: 150px;
+            left: 155px;
+            top: 60px;
+        }
+        #tom3{
+            border: 5px solid rgb(99,56,0);
+            background-image: radial-gradient(rgb(240,136,0),rgb(255,231,152));
+            width: 150px;
+            height: 150px;
+            right: 155px;
+            top: 60px;
+        }
+        #tom4{
+            width: 120px;
+            height: 120px;
+            right: 90px;
+            border: 10px solid rgb(99,56,0);
+            background-image: radial-gradient(rgb(105,60,0),rgb(252,195,8));
+            bottom: 110px;
+        }
+        #snare{
+            right: 208px;
+            border: 10px solid rgb(99,56,0);
+            background-image: radial-gradient(rgb(105,60,0),rgb(252,195,8));
+            top: 160px;
+        }
+        #drumset{
+            position: relative;
+            width: 48%;
+            height: 400px;
+        }
+        #leftcrash{
+            left: 5px;
+            border: 1px solid rgb(255,255,0);
+            background-image: radial-gradient(rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8));
+            top: 0px;
+        }
+        #rightcrash{
+            right: 5px;
+            border: 1px solid rgb(255,255,0);
+            background-image: radial-gradient(rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8),rgb(255,242,0),rgb(252,195,8));
+            top: 0px;
+        }
+        #kickbass{
+            width: 50px;
+            height: 50px;
+            right: 165px;
+            border: 2px solid rgb(255,145,0);
+            background-color: rgb(84,49,0);
+            top: 270px;
+        }
+        #bgmusic{
+            border: dashed rgb(251,173,222) 5px;
+            background: transparent;
+            width: 120px;
+            height: 30px;
+            font-size: 15px;
+            color: white;
+        }
+        option{
+            color: black;
+        }
+        #stick1{
+            width: 5px;
+            height: 150px;
+            background-color: rgb(84,49,0);
+            border-radius: 30%;
+            position: absolute;
+            bottom: 10px;
+            left: 280px;
+        }
+        #stick2{
+            width: 5px;
+            height: 150px;
+            background-color: rgb(84,49,0);
+            border-radius: 30%;
+            position: absolute;
+            bottom: 10px;
+            right: 280px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Beat it</h1>
+    <br>
+    <center>
+        <div id="drumset">
+            <input type="button" id="tom1" onmousedown="tom1()" onmouseup="tom1a()">
+            <input type="button" id="tom2" onmousedown="tom2()" onmouseup="tom2a()">
+            <input type="button" id="tom3" onmousedown="tom3()" onmouseup="tom3a()">
+            <input type="button" id="tom4" onmousedown="tom4()" onmouseup="tom4a()">
+            <input type="button" id="snare" onmousedown="snare()" onmouseup="snarea()">
+            <input type="button" id="leftcrash" onmousedown="leftcrash()" onmouseup="leftcrasha()">
+            <input type="button" id="rightcrash" onmousedown="rightcrash()" onmouseup="rightcrasha()">
+            <input type="button" id="kickbass" onmousedown="kickbass()" onmouseup="kickbassa()">
+            <div id="stick1"></div>
+            <div id="stick2"></div>
+        </div>
+    </center>
+    <div id="bgm">
+        <select id="bgmusic" onchange="bgm()">
+            <option>Select your BGM</option>
+            <option>BGM1</option>
+            <option>BGM2</option>
+        </select>
+    </div>
+    <script>
+        function tom1()
+        {
+            var Drum=new Audio();
+            Drum.src="tom-1.mp3"
+            Drum.play();
+            document.getElementById("tom1").style.width="130px"
+            document.getElementById("tom1").style.height="130px"
+            document.getElementById("tom1").style.marginTop="0px"
+            document.getElementById("tom1").style.marginLeft="0px"
+        }
+        function tom1a()
+        {
+            document.getElementById("tom1").style.width="120px"
+            document.getElementById("tom1").style.height="120px"
+            document.getElementById("tom1").style.marginTop="5px"
+            document.getElementById("tom1").style.marginLeft="5px"
+        }
+        function tom2()
+        {
+            var Drum=new Audio();
+            Drum.src="tom-2.mp3"
+            Drum.play();
+            document.getElementById("tom2").style.width="160px"
+            document.getElementById("tom2").style.height="160px"
+        }
+        function tom2a()
+        {
+            document.getElementById("tom2").style.width="150px"
+            document.getElementById("tom2").style.height="150px"
+        }
+        function tom3()
+        {
+            var Drum=new Audio();
+            Drum.src="tom-3.mp3"
+            Drum.play();
+            document.getElementById("tom3").style.width="160px"
+            document.getElementById("tom3").style.height="160px"
+        }
+        function tom3a()
+        {
+            document.getElementById("tom3").style.width="150px"
+            document.getElementById("tom3").style.height="150px"
+        }
+        function tom4()
+        {
+            var Drum=new Audio();
+            Drum.src="tom-4.mp3"
+            Drum.play();
+            document.getElementById("tom4").style.width="130px"
+            document.getElementById("tom4").style.height="130px"
+        }
+        function tom4a()
+        {
+            document.getElementById("tom4").style.width="120px"
+            document.getElementById("tom4").style.height="120px"
+        }
+        function snare()
+        {
+            var Drum=new Audio();
+            Drum.src="snare.mp3"
+            Drum.play();
+            document.getElementById("snare").style.width="210px"
+            document.getElementById("snare").style.height="210px"
+        }
+        function snarea()
+        {
+            document.getElementById("snare").style.width="200px"
+            document.getElementById("snare").style.height="200px"
+        }
+        function rightcrash()
+        {
+            var Drum=new Audio();
+            Drum.src="crash.mp3"
+            Drum.play();
+            document.getElementById("rightcrash").style.width="210px"
+            document.getElementById("rightcrash").style.height="210px"
+        }
+        function rightcrasha()
+        {
+            document.getElementById("rightcrash").style.width="200px"
+            document.getElementById("rightcrash").style.height="200px"
+        }
+        function leftcrash()
+        {
+            var Drum=new Audio();
+            Drum.src="leftcrash.mp3"
+            Drum.play();
+            document.getElementById("leftcrash").style.width="210px"
+            document.getElementById("leftcrash").style.height="210px"
+        }
+        function leftcrasha()
+        {
+            document.getElementById("leftcrash").style.width="200px"
+            document.getElementById("leftcrash").style.height="200px"
+        }
+        function kickbass()
+        {
+            var Drum=new Audio();
+            Drum.src="kick-bass.mp3"
+            Drum.play();
+            document.getElementById("kickbass").style.width="60px"
+            document.getElementById("kickbass").style.height="60px"
+        }
+        function kickbassa()
+        {
+            document.getElementById("kickbass").style.width="50px"
+            document.getElementById("kickbass").style.height="50px"
+        }
+        function bgm()
+        {
+            var bgm1=document.getElementById("bgmusic").value
+            if(bgm1=="BGM1")
+            {
+                var Drum=new Audio();
+                Drum.src="bgm1.mp3"
+                Drum.play();
+                Drum.loop=true;
+            }
+            if(bgm1=="BGM2")
+            {
+                var Drum=new Audio();
+                Drum.src="bgm2.mp3"
+                Drum.play();
+                Drum.loop=true;
+            }
+        }
+    </script>
+</body>
+</html>
